@@ -7,12 +7,12 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-books=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\BTech Projects\\Major_Project\\AI Assistant\\csv files\\BX-Books.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
+books=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\Github\\AI Assistant\\csv files\\BX-Books.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
 books["Book-Title"]=books["Book-Title"].str.lower()
 books=books[['ISBN', 'Book-Title', 'Book-Author', 'Year-Of-Publication', 'Publisher']]
 books.rename(columns={'Book-Title':'title','Book-Author':'author','Year-Of-Publication':'year'},inplace=True)
-users=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\BTech Projects\\Major_Project\\AI Assistant\\csv files\\BX-Users.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
-ratings=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\BTech Projects\\Major_Project\\AI Assistant\\csv files\\BX-Book-Ratings.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
+users=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\Github\\AI Assistant\\csv files\\BX-Users.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
+ratings=pd.read_csv('C:\\Users\\Manjunath\\Desktop\\Github\\AI Assistant\\csv files\\BX-Book-Ratings.csv',sep=";",error_bad_lines=False,warn_bad_lines=False,encoding='latin-1')
 users.Age.hist(bins=[0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
 plt.title('Age Distribution\n')
 plt.xlabel('age')
